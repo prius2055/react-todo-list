@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
 
@@ -56,7 +58,7 @@ const TodoItem = (props) => {
             <AiFillEdit className="edit-icon" onClick={editClickHandler} />
             <FaTrash
               className="delete-icon"
-              onClick={onClickHandler.bind(null, item.id)}
+              onClick={() => onClickHandler.bind(item.id)}
             />
           </div>
         </div>
@@ -70,7 +72,7 @@ const TodoItem = (props) => {
             onChange={(e) => updateHandler(e.target.value, item.id)}
             className="update-input"
           />
-          <button>Close</button>
+          <button type="submit">Close</button>
         </form>
       )}
     </>
@@ -78,3 +80,10 @@ const TodoItem = (props) => {
 };
 
 export default TodoItem;
+
+TodoItem.propTypes = {
+  item: propTypes.oneOfType([propTypes.object]).isRequired,
+  setTodosUpdateFunc: propTypes.func.isRequired,
+  onDelete: propTypes.func.isRequired,
+  onUpdate: propTypes.func.isRequired,
+};

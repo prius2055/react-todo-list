@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import { FaPlusCircle } from 'react-icons/fa';
 
 import './InputTodo.css';
@@ -41,3 +42,7 @@ const InputTodo = (props) => {
 };
 
 export default InputTodo;
+
+InputTodo.propTypes = {
+  todoInputSubmitHandler: propTypes.func.isRequired,
+};

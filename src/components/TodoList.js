@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
@@ -20,3 +21,10 @@ const TodoList = (props) => {
 };
 
 export default TodoList;
+
+TodoList.propTypes = {
+  todoArray: propTypes.oneOfType([propTypes.array]).isRequired,
+  setTodosFunc: propTypes.func.isRequired,
+  deleteHandler: propTypes.func.isRequired,
+  updateHandler: propTypes.func.isRequired,
+};
