@@ -1,16 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import InputTodo from './InputTodo';
 import TodoList from './TodoList';
 
 import './TodoLogic.css';
-
-// let todos;
-
-// if (localStorage.getItem('todos')) {
-//   todos = JSON.parse(localStorage.getItem('todos'));
-// } else {
-//   todos = [];
-// }
 
 const arrayOfTodos = [
   {
@@ -64,7 +56,7 @@ const TodosLogic = () => {
   };
 
   return (
-    <div className='todo-logic'>
+    <div className="todo-logic">
       <InputTodo todoInputSubmitHandler={todoItemHandler} />
       <TodoList
         todoArray={todos}

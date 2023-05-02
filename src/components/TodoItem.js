@@ -7,20 +7,20 @@ import { useState } from 'react';
 const TodoItem = (props) => {
   const [editable, setEditable] = useState(false);
 
-  const { item, setTodosUpdateFunc, onDelete, onUpdate } = props;
+  const {
+    item, setTodosUpdateFunc, onDelete, onUpdate,
+  } = props;
 
   const onChangeHandler = (id) => {
-    setTodosUpdateFunc((prevState) =>
-      prevState.map((prevTodo) => {
-        if (prevTodo.id === id) {
-          return {
-            ...prevTodo,
-            completed: !prevTodo.completed,
-          };
-        }
-        return prevTodo;
-      })
-    );
+    setTodosUpdateFunc((prevState) => prevState.map((prevTodo) => {
+      if (prevTodo.id === id) {
+        return {
+          ...prevTodo,
+          completed: !prevTodo.completed,
+        };
+      }
+      return prevTodo;
+    }));
   };
 
   const onClickHandler = (id) => {
@@ -43,19 +43,19 @@ const TodoItem = (props) => {
   return (
     <>
       {!editable && (
-        <div className='todo-item'>
-          <div className='item-detail'>
+        <div className="todo-item">
+          <div className="item-detail">
             <input
-              type='checkbox'
+              type="checkbox"
               checked={item.completed}
               onChange={() => onChangeHandler(item.id)}
             />
             <p>{item.title}</p>
           </div>
-          <div className='item-icons'>
-            <AiFillEdit className='edit-icon' onClick={editClickHandler} />
+          <div className="item-icons">
+            <AiFillEdit className="edit-icon" onClick={editClickHandler} />
             <FaTrash
-              className='delete-icon'
+              className="delete-icon"
               onClick={onClickHandler.bind(null, item.id)}
             />
           </div>
@@ -63,12 +63,12 @@ const TodoItem = (props) => {
       )}
 
       {editable && (
-        <form className='todo-update' onSubmit={updateCloseHandler}>
+        <form className="todo-update" onSubmit={updateCloseHandler}>
           <input
-            type='text'
+            type="text"
             value={item.title}
             onChange={(e) => updateHandler(e.target.value, item.id)}
-            className='update-input'
+            className="update-input"
           />
           <button>Close</button>
         </form>

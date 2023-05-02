@@ -26,14 +26,14 @@ const InputTodo = (props) => {
 
   return (
     <>
-      <form className='input-todo' onSubmit={todoInputSubmit}>
+      <form className="input-todo" onSubmit={todoInputSubmit}>
         <input
-          type='text'
-          placeholder='Add todo...'
+          type="text"
+          placeholder="Add todo..."
           onChange={onChangeHandler}
           value={newTodoTitle}
         />
-        <FaPlusCircle className='add-icon' onClick={todoInputSubmit} />
+        <FaPlusCircle className="add-icon" onClick={todoInputSubmit} />
       </form>
       <span>{message}</span>
     </>

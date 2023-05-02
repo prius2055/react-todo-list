@@ -3,13 +3,11 @@ import TodosLogic from './TodosLogic';
 
 import './TodoApp.css';
 
-const TodoApp = () => {
-  return (
-    <div className='todo-app'>
-      <Header />
-      <TodosLogic />
-    </div>
-  );
-};
+const TodoApp = () => (
+  <div className="todo-app">
+    <Header />
+    <TodosLogic />
+  </div>
+);
 
 export default TodoApp;

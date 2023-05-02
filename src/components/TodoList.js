@@ -1,9 +1,11 @@
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
-  const { todoArray, setTodosFunc, deleteHandler, updateHandler } = props;
+  const {
+    todoArray, setTodosFunc, deleteHandler, updateHandler,
+  } = props;
   return (
-    <div className='todo-list'>
+    <div className="todo-list">
       {todoArray.map((todoArrayItem) => (
         <TodoItem
           key={todoArrayItem.id}

@@ -1,12 +1,10 @@
-import './Header.css'
+import './Header.css';
 
-const Header = () => {
-  return (
-    <div className='header'>
-      <h1>todos</h1>
-      <p>Items will persist in the browser local storage</p>
-    </div>
-  );
-};
+const Header = () => (
+  <div className="header">
+    <h1>todos</h1>
+    <p>Items will persist in the browser local storage</p>
+  </div>
+);
 
-export default Header
+export default Header;
