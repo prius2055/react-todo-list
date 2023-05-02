@@ -1,0 +1,21 @@
+.input-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px 4px rgba(221, 221, 221, 1);
+}
+
+.input-todo input {
+  width: 90%;
+  padding: 12px 2px;
+  border: none;
+  outline: none;
+}
+
+.input-todo .add-icon {
+  cursor: pointer;
+}

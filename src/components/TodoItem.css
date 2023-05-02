@@ -1,0 +1,47 @@
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc;
+  padding: 8px;
+  margin-bottom: 2px;
+}
+
+.item-detail {
+  display: flex;
+  align-items: center;
+}
+
+.item-detail input {
+  cursor: pointer;
+}
+
+.item-detail p {
+  margin-left: 10px;
+}
+
+.item-icons .edit-icon {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.item-icons .delete-icon {
+  cursor: pointer;
+}
+
+.todo-update {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-input {
+  border: 1px solid #dfdfdf;
+  outline: none;
+  padding: 14px 12px;
+  width: 90%;
+}
+
+.todo-update button {
+  width: 10%;
+}
